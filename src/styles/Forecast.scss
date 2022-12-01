@@ -1,0 +1,9 @@
+@import "./mixins.scss";
+
+.forecast-container{
+    position: absolute;
+    top: 10%;
+    p{
+        color:red;
+    }
+}
