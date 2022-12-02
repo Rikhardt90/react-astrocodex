@@ -11,8 +11,8 @@ export default function Pagination({getData}) {
     }
 
     return <div className="pagination">
-        <button className="pagination-btn" onClick={() => changePage(actualPage - 1)}>{"prev"}</button>
+        <button className="pagination-btn" onClick={() => changePage(actualPage - 10)}>{"prev"}</button>
         <span className="pagination-btn">{actualPage}</span>
-        <button className="pagination-btn" onClick={() => changePage( actualPage + 1)}>{"next"}</button>
+        <button className="pagination-btn" onClick={() => changePage( actualPage + 10)}>{"next"}</button>
     </div>
 }

@@ -1,17 +1,15 @@
-//import "../../styles/Characters.scss";
+import "../styles/Card.scss";
 
 export default function Gallery({ bodies }) {
-  return (
-    <div className="bodies">
-      
-      {bodies.map((item) => (
-        <div className="body-card" key={item.id}>
-          console.log(bodies);
-          <h3>{item.name}</h3>
-          <img src={item.image} alt={item.name} />
 
-          <p>{item.gender}</p>
-          <p>Status: {item.status}</p>
+  return (
+    <div className="card-container">
+      {bodies.map((item) => (
+        <div className="body-card" key={item}>
+          <iframe className="body-image" SRC="http://server1.sky-map.org/skywindow?ra=38.5&de=40&zoom=3&img_source=SDSS">asdf</iframe>
+          
+ 
+          <h3>{item.fields.name}</h3>
         </div>
       ))} 
 
