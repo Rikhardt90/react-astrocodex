@@ -1,10 +1,15 @@
 @import "./mixins.scss";
 
-.card-container{
-    @include flexCenter(row, space-evenly, center);
-    width: 100%;
-  .body-image {
-    width: 150px;
-    height: 150px;
+.card-container {
+  @include flexCenter(row, space-evenly, center);
+  width: 100%;
+  .body-card {
+    @include flexCenter(column, space-evenly, center);
+    border: 1px solid orange;
+    width: 20%;
+    .body-image {
+      width: 150px;
+      height: 150px;
+    }
   }
 }
