@@ -7,11 +7,14 @@ import Card from "../../components/Card";
 
 const Search = () => {
 
+  const elementsPerPage = 20
   const [Bodies, setBodies] = useState([]);
-  const URL ="https://data.opendatasoft.com//api/records/1.0/search/?dataset=ngc-ic-messier-catalog%40datastro&rows=20&start=";
+  const URL ="https://data.opendatasoft.com//api/records/1.0/search/?dataset=ngc-ic-messier-catalog%40datastro";
 
   const getBodies = async (newPage = 0) => {
-    const res = await axios(URL + newPage);
+    const rowsUrlParameter = "&rows=" + elementsPerPage
+    const startUrlParameter = "&start=" + newPage * elementsPerPage
+    const res = await axios(URL + rowsUrlParameter + startUrlParameter);
     setBodies(res.data.records);
   };
 
