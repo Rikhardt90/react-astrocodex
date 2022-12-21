@@ -3,7 +3,7 @@ import "../../styles/Search.scss";
 import axios from "axios";
 //import "../../styles/Gallery.scss"
 import Pagination from "../../components/Pagination";
-import Card from "../../components/Card";
+import CardGallery from "../../components/CardGallery";
 
 const Search = () => {
 
@@ -30,7 +30,7 @@ const Search = () => {
       </div>
       <div className="gallery-container">
         <div className="gallery">
-          <Card bodies={Bodies} />
+          <CardGallery bodies={Bodies} />
           <Pagination getData={getBodies} />
         </div>
       </div>
